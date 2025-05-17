@@ -39,46 +39,46 @@
 </head>
 <body>
 
-  <h1>🎵 Loop or Discover? How Spotify’s Algorithms Shape the Soundtrack of Our Lives</h1>
+  <h1>Loop or Discover? How Spotify’s Algorithms Shape the Soundtrack of Our Lives</h1>
   <p><strong>By Amen Hailu</strong></p>
 
-  <h2>✨ Introduction</h2>
+  <h2>Introduction</h2>
   <p>In an era defined by personalization, Spotify has become more than just a music platform; it’s a mood manager, a digital DJ, and for many, the background to everyday life. Algorithms, like Spotify's, have become invisible architects of our choices, from what we watch to how we think. With over 600 million users globally, its recommendation engine does more than personalize: it influences.</p>
   <p>This project set out to answer a deceptively simple question:</p>
   <blockquote><strong>Does exposure to Spotify’s algorithmic recommendations lead users to a broader range of musical genres over time, or does it result in a more limited and repetitive listening pattern?</strong></blockquote>
 
-  <h2>📖 Background Research: Echo Chambers in Sound</h2>
+  <h2>Background Research: Echo Chambers in Sound</h2>
   <p>Recommendation systems across media have raised concerns about filter bubbles. In music, prior research like Celma (2010) and Nguyen et al. (2014) describes “musical filter bubbles.” Spotify’s hybrid of collaborative filtering and audio clustering makes it powerful—but does it promote real discovery? This project aims to find out using a public dataset of over 900,000 tracks.</p>
 
-  <h2>🧰 Methodology</h2>
-  <h3>📂 Dataset</h3>
+  <h2>Methodology</h2>
+  <h3>Dataset</h3>
   <p>The “900K+ Spotify Songs” dataset includes genres, emotions, audio features, and cluster IDs. It is a proxy dataset, not user-history-based, but provides insights into Spotify’s recommendation structures.</p>
 
-  <h3>⚖️ Approach</h3>
+  <h3>Approach</h3>
   <ul>
     <li><strong>Similarity Pairing</strong>: Examined how often recommended songs matched the genre or emotion of originals.</li>
     <li><strong>Exploration vs Repetition</strong>: Measured entropy and built a loop score based on shared audio clusters.</li>
     <li><strong>PCA + Heatmaps</strong>: Used PCA to visualize genre clustering and mapped transitions across genres and emotions.</li>
   </ul>
 
-  <h3>✊ Ethics</h3>
+  <h3>Ethics</h3>
   <p>All data were publicly sourced and anonymized. No user data were used.</p>
 
-  <h2>📊 Results & Visualizations</h2>
+  <h2>Results & Visualizations</h2>
 
-  <h3>🎼 Genre Match Rate & Entropy</h3>
+  <h3>Genre Match Rate & Entropy</h3>
   <p>Only 24% of Spotify recommendations matched the original song’s genre—but 42% matched emotion. This suggests Spotify favors emotional continuity over stylistic change.</p>
   <iframe src="https://public.tableau.com/views/MusicDiversity/Dashboard2"></iframe>
 
-  <h3>🎚️ PCA Audio Feature Map</h3>
+  <h3>PCA Audio Feature Map</h3>
   <p>PCA clustering shows genres like EDM and Hip Hop form tight acoustic loops—highlighting sonic repetition behind stylistic diversity.</p>
   <iframe src="https://public.tableau.com/views/MusicDiversity/Dashboard2"></iframe>
 
-  <h3>🎭 Emotion & Genre Transitions</h3>
+  <h3>Emotion & Genre Transitions</h3>
   <p>Transition heatmaps show diagonal dominance—joy → joy, pop → pop. Some cross-genre jumps (e.g., country → hip hop) exist, but are the exception.</p>
   <iframe src="https://public.tableau.com/views/MusicDiversity/Dashboard4"></iframe>
 
-  <h2>📅 Limitations & Future Work</h2>
+  <h2>Limitations & Future Work</h2>
   <ul>
     <li>Proxy data lacks real user listening timelines.</li>
     <li>No distinction between editorial/user/algorithmic playlists.</li>
@@ -86,7 +86,7 @@
   </ul>
   <p><strong>Next steps:</strong> Study genre “stickiness,” add time dynamics, and segment findings by geography and culture.</p>
 
-  <h2>🎶 Conclusion</h2>
+  <h2>Conclusion</h2>
   <p>Spotify doesn’t trap us in hard walls—but builds soft loops. We feel like we’re discovering, but much of that discovery is acoustically and emotionally consistent. In short, Spotify promotes micro-exploration—but only within comfortable boundaries.</p>
   <blockquote><strong>Spotify promotes exploration, but only within the bounds of familiarity.</strong></blockquote>
 
