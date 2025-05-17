@@ -8,14 +8,47 @@
     body {
       background-color: #000;
       color: #e0e0e0;
-      font-family: 'Georgia', serif;
-      line-height: 1.7;
+      font-family: Georgia, serif;
+      line-height: 1.8;
       max-width: 950px;
       margin: auto;
       padding: 2rem;
     }
     h1, h2, h3 {
       color: #1DB954;
+      font-weight: 700;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    h2 {
+      margin-top: 2rem;
+      font-size: 1.6rem;
+    }
+    h3 {
+      margin-top: 1.2rem;
+      font-size: 1.3rem;
+    }
+    p, li, blockquote {
+      font-size: 1rem;
+    }
+    blockquote {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid #1DB954;
+      color: #ccc;
+      font-style: italic;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+    }
+    ul {
+      margin-left: 1.5rem;
     }
     a {
       color: #1DB954;
@@ -24,74 +57,82 @@
     a:hover {
       text-decoration: underline;
     }
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-      background: #fff;
-    }
     hr {
       border: 1px solid #333;
+      margin-top: 3rem;
     }
   </style>
 </head>
 <body>
 
-  <h1>Loop or Discover? How Spotify’s Algorithms Shape the Soundtrack of Our Lives</h1>
+  <h1>🎵 Loop or Discover? How Spotify's Algorithms Shape the Soundtrack of Our Lives</h1>
   <p><strong>By Amen Hailu</strong></p>
 
-  <h2>Introduction</h2>
-  <p>In an era defined by personalization, Spotify has become more than just a music platform; it’s a mood manager, a digital DJ, and for many, the background to everyday life. Algorithms, like Spotify's, have become invisible architects of our choices, from what we watch to how we think. With over 600 million users globally, its recommendation engine does more than personalize: it influences.</p>
-  <p>This project set out to answer a deceptively simple question:</p>
-  <blockquote><strong>Does exposure to Spotify’s algorithmic recommendations lead users to a broader range of musical genres over time, or does it result in a more limited and repetitive listening pattern?</strong></blockquote>
+  <h2>✨ Introduction: A Platform That Knows Your Soundtrack</h2>
+  <p>In the age of streaming, algorithms aren’t just personalizing our choices—they’re curating our emotional experiences. With over 600 million global users, Spotify has emerged as one of the most influential platforms in digital media. Its recommendation engine determines not only what we listen to next, but how we feel, move, and even remember. As our daily soundtracks become algorithmically guided, the boundary between preference and programming grows increasingly blurred.</p>
+  <p>This research investigates Spotify’s algorithmic recommendations with a central question in mind:</p>
+  <blockquote><strong>Does exposure to Spotify’s algorithmic recommendations lead to a broader range of musical genres over time, or does it result in a more limited and repetitive listening pattern?</strong></blockquote>
+  <p>The implications extend far beyond listening habits: they touch on artist visibility, emotional regulation, and the future of cultural diversity in automated spaces.</p>
 
-  <h2>Background Research: Echo Chambers in Sound</h2>
-  <p>Recommendation systems across media have raised concerns about filter bubbles. In music, prior research like Celma (2010) and Nguyen et al. (2014) describes “musical filter bubbles.” Spotify’s hybrid of collaborative filtering and audio clustering makes it powerful—but does it promote real discovery? This project aims to find out using a public dataset of over 900,000 tracks.</p>
+  <h2>📖 Background Research: Echo Chambers, Filter Bubbles, and Sonic Comfort Zones</h2>
+  <p>Recommendation systems across platforms like YouTube, TikTok, and Netflix have come under scrutiny for reinforcing “filter bubbles.” In music, researchers like Celma and Nguyen have described the emergence of “musical filter bubbles,” where personalization discourages stylistic or emotional risk-taking.</p>
+  <p>Spotify’s algorithm blends collaborative filtering, NLP, and audio feature clustering. But has it created a loop disguised as discovery? This project uses a large metadata dataset to explore Spotify’s recommendation behaviors.</p>
 
-  <h2>Methodology</h2>
+  <h2>🧰 Methodology: Data, Metrics, and Ethical Framing</h2>
   <h3>Dataset</h3>
-  <p>The “900K+ Spotify Songs” dataset includes genres, emotions, audio features, and cluster IDs. It is a proxy dataset, not user-history-based, but provides insights into Spotify’s recommendation structures.</p>
-
+  <p>This study uses the <strong>900K+ Spotify Songs Dataset</strong> from Kaggle. It includes genre tags, emotional labels, playlist types, and audio features (danceability, valence, etc.). Though not tied to user history, it reveals Spotify's structural logic.</p>
   <h3>Approach</h3>
   <ul>
-    <li><strong>Similarity Pairing</strong>: Examined how often recommended songs matched the genre or emotion of originals.</li>
-    <li><strong>Exploration vs Repetition</strong>: Measured entropy and built a loop score based on shared audio clusters.</li>
-    <li><strong>PCA + Heatmaps</strong>: Used PCA to visualize genre clustering and mapped transitions across genres and emotions.</li>
+    <li><strong>Similarity Pairing</strong>: Compared recommended songs to originals using cluster IDs.</li>
+    <li><strong>Entropy & Looping Scores</strong>: Calculated diversity of genre and emotion and measured how often acoustic features were repeated.</li>
+    <li><strong>PCA & Transitions</strong>: Visualized audio clustering and tracked genre/emotion shifts with heatmaps.</li>
   </ul>
-
   <h3>Ethics</h3>
-  <p>All data were publicly sourced and anonymized. No user data were used.</p>
+  <p>All data were public, anonymized, and used solely for analytical purposes. No personal user data was accessed.</p>
 
-  <h2>Results & Visualizations</h2>
+  <h2>📊 Results & Discussion</h2>
 
-  <h3>Genre Match Rate & Entropy</h3>
-  <p>Only 24% of Spotify recommendations matched the original song’s genre—but 42% matched emotion. This suggests Spotify favors emotional continuity over stylistic change.</p>
-  <iframe src="https://public.tableau.com/views/MusicDiversity/Dashboard2"></iframe>
+  <h3>🎼 Mood Is King: Spotify Favors Emotional Continuity</h3>
+  <p>Only 24% of recommended songs matched the original genre, while 42% matched the emotion. This suggests Spotify prioritizes mood alignment. By doing so, the platform creates emotional continuity—subtle changes in sound without altering how the music makes the listener feel.</p>
 
-  <h3>PCA Audio Feature Map</h3>
-  <p>PCA clustering shows genres like EDM and Hip Hop form tight acoustic loops—highlighting sonic repetition behind stylistic diversity.</p>
-  <iframe src="https://public.tableau.com/views/MusicDiversity/Dashboard2"></iframe>
+  <h3>🌀 Diversity in Sound, Uniformity in Feeling</h3>
+  <p>Genre entropy was high (6.33), but emotional entropy was low (2.02). While users may hear a range of genres, the feelings evoked remain narrowly consistent. Spotify offers micro-discovery: different styles, same vibes.</p>
 
-  <h3>Emotion & Genre Transitions</h3>
-  <p>Transition heatmaps show diagonal dominance—joy → joy, pop → pop. Some cross-genre jumps (e.g., country → hip hop) exist, but are the exception.</p>
-  <div class='tableauPlaceholder' id='viz1747445313561' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mu&#47;MusicDiversity&#47;Dashboard3&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MusicDiversity&#47;Dashboard3' /><param name='tabs' value='yes' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mu&#47;MusicDiversity&#47;Dashboard3&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1747445313561');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='610px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='420px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='610px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.minHeight='800px';vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+  <h3>🎛️ Behind the Music: PCA Shows Acoustic Looping</h3>
+  <p>PCA mapping revealed that recommended songs cluster closely in acoustic space. Genres like EDM and Hip Hop form dense sonic zones, reinforcing that musical novelty often masks acoustic repetition.</p>
 
-  <h2>Limitations & Future Work</h2>
+  <h3>🔁 Transition Diagrams: Safe Steps Across Familiar Borders</h3>
+  <p>Emotion and genre transitions mostly followed “diagonal” paths (e.g., joy → joy, pop → pop), confirming a loop logic. Occasional leaps, like country to hip hop, were tied to crossover artists or similar tempo profiles—showing that even deviations are controlled.</p>
+
+  <h3>🧠 Interpretation</h3>
+  <p>Spotify’s algorithm encourages what I call “micro-exploration.” The platform introduces new songs that differ on paper—but sound and feel remarkably similar. This maintains user comfort while limiting exposure to unfamiliar emotional or sonic landscapes.</p>
+
+  <h2>📅 Limitations & Future Work</h2>
   <ul>
-    <li>Proxy data lacks real user listening timelines.</li>
-    <li>No distinction between editorial/user/algorithmic playlists.</li>
-    <li>No demographic breakdown of algorithmic effects.</li>
+    <li>Dataset does not reflect actual listening behavior over time.</li>
+    <li>No segmentation between editorial, user, and algorithmic playlists.</li>
+    <li>No demographic breakdowns (age, location, language, etc.).</li>
   </ul>
-  <p><strong>Next steps:</strong> Study genre “stickiness,” add time dynamics, and segment findings by geography and culture.</p>
+  <p>Future research could explore genre stickiness, song release effects, or cross-cultural differences using behavioral APIs or user surveys.</p>
 
-  <h2>Conclusion</h2>
-  <p>Spotify doesn’t trap us in hard walls—but builds soft loops. We feel like we’re discovering, but much of that discovery is acoustically and emotionally consistent. In short, Spotify promotes micro-exploration—but only within comfortable boundaries.</p>
-  <blockquote><strong>Spotify promotes exploration, but only within the bounds of familiarity.</strong></blockquote>
+  <h2>🎶 Conclusion: Algorithmic Curation and the Boundaries of Taste</h2>
+  <p>Spotify doesn’t lock users in—but it nudges them gently. Its algorithm encourages discovery within emotional comfort zones, leading to familiarity disguised as exploration. While this ensures smooth listening, it also risks flattening musical diversity and limiting artistic reach.</p>
+  <blockquote><strong>Spotify promotes exploration—but only within the bounds of familiarity.</strong></blockquote>
+  <p>As recommendation engines become gatekeepers of culture, transparency and design accountability are more important than ever.</p>
+
+  <h2>🧪 Explore the Interactive Visuals</h2>
+
+  <h3>🎼 Genre Match & Entropy Dashboard</h3>
+  <iframe src="https://public.tableau.com/views/MusicDiversity/Dashboard2" allowfullscreen></iframe>
+
+  <h3>🎚️ PCA Acoustic Feature Map</h3>
+  <iframe src="https://public.tableau.com/views/MusicDiversity/Dashboard2" allowfullscreen></iframe>
+
+  <h3>🎭 Genre & Emotion Transitions Heatmaps</h3>
+  <iframe src="https://public.tableau.com/views/MusicDiversity/Dashboard4" allowfullscreen></iframe>
 
   <hr />
-  <p><em>Project by Amen Hailu. GitHub and dataset links to be added.</em></p>
+  <p><em>Site built by Amen Hailu. Research based on Kaggle dataset: "900K+ Spotify Songs with Lyrics, Emotions & More."</em></p>
 
 </body>
 </html>
