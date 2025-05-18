@@ -16,7 +16,7 @@
     }
     h1, h2, h3 {
       color: #1DB954;
-      font-weight: 700;
+      font-weight: 675;
     }
     h1 {
       font-size: 2rem;
@@ -141,15 +141,15 @@
   
   <h2>Methodology: Data, Metrics, and Ethical Framing</h2>
     <p>To analyze Spotify’s algorithmic logic, I used the publicly available <strong>900K+ Spotify Songs Dataset</strong> from Kaggle (published by DevDope). This dataset contains metadata for over 900,000 tracks, including genre labels, emotional classifications, playlist tags, similarity clusters, and audio features such as danceability, valence, and energy. While the dataset does not include user behavior, it provides a strong proxy for examining Spotify’s internal recommendation patterns.</p>
-    <p>For my approach I used three primary methods to guided the analysis: </p>
+    <p>For my approach I used three primary methods to guide the analysis: </p>
       <ul>
         <li><strong>Similarity Pairing: </strong>Tracks were grouped using cluster IDs to compare original songs with their recommended counterparts. This made it possible to evaluate how often Spotify maintained or altered musical features like genre and emotion.</li>
-        <li><strong>Exploration vs. Repetition Metrics:</strong></li>
+        <li><strong>Exploration vs. Repetition Metrics</strong></li>
           <ul>
             <li>I used <strong>Shannon Entropy</strong> to assess diversity in genre and emotion across tracks.</li>
             <li>I calculated a <strong>looping score</strong> based on how frequently recommended songs remained within the same audio feature cluster as previous tracks.</li>
           </ul>
-        <li><strong>Dimensional and Visual Analysis:</strong></li>
+        <li><strong>Dimensional and Visual Analysis</strong></li>
            <ul>
              <li><strong>PCA (Principal Component Analysis)</strong> visualizations mapped songs in two-dimensional acoustic space.</li> 
              <li><strong>Genre and Emotion Transition Heatmaps </strong>highlighted how often listeners were nudged across emotional or stylistic boundaries.</li> 
