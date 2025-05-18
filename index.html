@@ -61,12 +61,70 @@
       border: 1px solid #333;
       margin-top: 3rem;
     }
+.recommendation-table table,
+.entropy-table table {
+  width: 100%;
+  margin: 1.5rem auto;
+  border-collapse: collapse;
+  text-align: center;
+  font-family: 'Georgia', serif;
+}
+
+.recommendation-table th,
+.entropy-table th {
+  background-color: #fcd79c;
+  color: #000;
+  padding: 12px;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+}
+
+.recommendation-table td,
+.entropy-table td {
+  background-color: #fcecd3;
+  padding: 10px 12px;
+  font-size: 1.05rem;
+  color: #000;
+}
+
+.recommendation-table td:first-child,
+.recommendation-table th:first-child {
+  font-style: italic;
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.entropy-table th {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.entropy-table td:first-child {
+  text-align: left;
+  padding-left: 1rem;
+}
+      .center {
+    text-align: center;
+  }
+  .center img {
+    display: block;
+    margin: 1.5rem auto;
+    max-width: 90%;
+    height: auto;
+    border: 1px solid #444;
+  }
+  .tableauPlaceholder {
+    display: flex;
+    justify-content: center;
+  }
   </style>
+
 </head>
 <body>
-  <h1>Loop or Discover?</h1>
-    <h2><em>How Spotify's Algorithms Shape the Soundtrack of Our Lives</em></h2>
+  <div class="center">
+  <h1>Loop or Discover?</br><em>How Spotify's Algorithms Shape the Soundtrack of Our Lives</em></h1>
     <p><strong>By Amen Hailu</strong></p>
+  </div>
 
   
   <h2>Introduction: A Platform That Knows Your Soundtrack</h2>
@@ -105,11 +163,52 @@
 <h3><em>Spotify Preserves Mood, Not Style</em></h3>
   <p>My analysis began by comparing how often Spotify recommendations matched the genre or emotion of the original song. The results were revealing: only 24% of recommendations matched the original track’s genre, while 42% matched its emotional tone. This suggests that Spotify prioritizes emotional alignment over stylistic diversity. In practice, this means a user listening to a nostalgic indie song may be guided to an acoustic folk ballad rather than an upbeat hip-hop track, because the emotional tone is preserved.</p> 
   <p>This mood-first logic reflects Spotify’s investment in listener retention. Emotional continuity keeps users engaged without overwhelming them with jarring transitions. Yet it also subtly limits the types of emotional experiences listeners are likely to encounter.</p>
+    <div class="recommendation-table">
+      <table>
+        <thead>
+          <tr>
+              <th>RATE</th>
+              <th>GENRE</th>
+              <th>EMOTION</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+              <td>Entropy</td>
+              <td>6.33199</td>
+              <td>2.020628</td>
+          </tr>
+          <tr>
+              <td>Loop</td>
+              <td>0.2431371</td>
+              <td>0.4170776</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
     <div class='tableauPlaceholder' id='viz1747530315794' style='position: relative'><noscript><a href='#'><img alt='Recommendation Rates ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mu&#47;MusicDiversity&#47;Dashboard5&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MusicDiversity&#47;Dashboard5' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mu&#47;MusicDiversity&#47;Dashboard5&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1747530315794');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
   
 <h3><em>Diversity in Sound, Uniformity in Feeling</em></h3>
  <p>To assess how diverse Spotify’s recommendations truly are, I calculated their entropy scores. The results show a disparity: genre entropy was relatively high (6.33), suggesting a broad stylistic range, but emotional entropy was significantly lower (2.02). Even across themed playlists such as “Good for Study” or “Party,” the emotional variety remained narrow.</p>
  <p>These findings point to a model of micro-discovery: Spotify may expose users to new genres or unfamiliar artists, but it keeps the emotional register tightly controlled. As a result, novelty exists within well-defined affective boundaries, reinforcing familiar feelings even as musical styles vary.</p>
+    <div class="entropy-table">
+      <table>
+        <thead>
+          <tr><th>Tag</th><th>Genre Entropy</th><th>Emotion Entropy</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Good for Driving</td><td>5.465312</td><td>2.004524</td></tr>
+          <tr><td>Good for Exercise</td><td>5.549336</td><td>2.002963</td></tr>
+          <tr><td>Good for Morning Routine</td><td>5.564222</td><td>2.004699</td></tr>
+          <tr><td>Good for Party</td><td>5.727598</td><td>2.000038</td></tr>
+          <tr><td>Good for Relaxation/Meditation</td><td>5.836403</td><td>1.980057</td></tr>
+          <tr><td>Good for Running</td><td>5.517970</td><td>2.004624</td></tr>
+          <tr><td>Good for Social Gatherings</td><td>5.709174</td><td>2.001096</td></tr>
+          <tr><td>Good for Work/Study</td><td>5.837649</td><td>1.980591</td></tr>
+          <tr><td>Good for Yoga/Stretching</td><td>5.838127</td><td>1.983268</td></tr>
+        </tbody>
+      </table>
+    </div>
     <div class='tableauPlaceholder' id='viz1747529018569' style='position: relative'><noscript><a href='#'><img alt='Playlist Tag Entropy ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mu&#47;MusicDiversity&#47;PlaylistTagEntropy&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='MusicDiversity&#47;PlaylistTagEntropy' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Mu&#47;MusicDiversity&#47;PlaylistTagEntropy&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='language' value='en-US' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1747529018569');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='800px';vizElement.style.height='627px';} else { vizElement.style.width='100%';vizElement.style.height='727px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
   
 <h3><em>Behind the Music: PCA Shows Acoustic Looping</em></h3>
